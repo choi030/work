@@ -1,164 +1,150 @@
 @charset "utf-8";
+
 body {
-          font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
-          margin: 0 auto;
-          text-align: center;
+        font-family: "Pretendard Variable", "Malgun Gothic", sans-serif;
+        margin: 0 auto;
+        text-align: center;
+        overflow-x: hidden;
 }
 
-/* ## 모바일 ## */
-@media (width >= 390px) {
-
+/* ## pc ## */
 /*    ******* header ******** */
 .work_header {
-        background-color: transparent;
-        position: sticky;
-        top: 0;
-        margin-bottom: 1px;
-      }
-      
-.work_header > .work_top{
+        height: 120px;
+        padding: 20px;
+}
+
+.work_header>.work_top {
         display: flex;
         padding: 20px 20px;
         justify-content: space-between;
-      }
-.work_header > .work_top .logo {
+}
+
+.work_header>.work_top .logo {
         width: 32px;
 }
 
-/********** title   *************/
+
+/******* title ********/
 .work_title {
-        width:  38.47%; height:  38.47%;
+        width: 38.47%;
+        height: 38.47%;
         text-align: center;
         margin: 0 auto;
 }
 
+.page-title__txt {
+        width: 60%;
+}
+
 
 /*    ******* main ******** */
-.main_title > h1 {
+.main_title>h1 {
         color: #EA5028;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 5rem;
         font-weight: bold;
 }
 
+.item_wrap {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+}
 
 .work_grid {
-                display: grid;
-                width: 100%; 
-                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        padding: 0 20px;
+        gap:0 5%;
+        box-sizing: border-box;
+
 }
 
-.work_grid > .url > .urlImg {
-        display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.work_grid > .url > .urlImg > .Img {
-        width: 100%; 
-    padding-bottom: 100%;
-}
-.work_grid > .url {
-        margin: 120px 0px 0px;
-        padding: 0px 20px;
+.work_grid>.url {
+        margin: 218px 0px 0px;
         box-sizing: border-box;
-        height: 416px;
+        max-width: 20%;
+        width: 100%;
 }
-.work_grid > .url > p {
+
+.work_grid>.url>.urlImg>.Img {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+}
+
+.work_grid>.url_1>.urlImg_1>.Img_1 {
+        width: 100%;
+        transition: background 0.5s;
+        position: relative;
+}
+
+/* 원 */
+.work_grid>.url>.urlImg .circleType {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+}
+
+/* 마름모 */
+.work_grid>.url>.urlImg .rhombusType {
+        -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 오각형 */
+.work_grid>.url>.urlImg .pentagonType {
+        -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.work_grid>.url>.urlImg .Img img {
+        width: 100%;
+}
+
+.work_grid>.url>.urlImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+
+
+.work_grid>.url>p {
         text-align: center;
         padding: 40px 0px 0px;
         font-size: 1.25rem;
-}
-/*    ******* 그리드 이미지 ******** */
-/* 원 */ .work_grid > .url_1 > .urlImg_1 > .Img_1 {
-        background-image: url(./images/work/works_thumb_024.jpg);
-        background-size: cover;
-        border-radius: 50%;
-        width: 100%; 
-    padding-bottom: 100%;
+        word-break: keep-all;
 }
 
-
-
-/* 사각형 */ .work_grid > .url_2 > .urlImg_2 > .Img_2 {
-        background-image: url(./images/work/works_thumb_023.jpg);
-        background-size: cover;
-       
-}
-
-/* 마름모 */ .work_grid > .url_3 > .urlImg_3 > .Img_3 {
-    background: url(./images/work/works_thumb_001.jpg) no-repeat;
-    background-size: cover;
-    position: relative;
-    transform: rotate(45deg) scale(0.7071);
-    transform-origin: 50% 50%;
-}
-/* 오각형 */.work_grid > .url_4 > .urlImg_4 > .Img_4{
-        background-image: url(./images/work/works_thumb_002.jpg);
-        background-size: cover; 
-        background-repeat: no-repeat;
-        position: relative;
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-}
-/* 마름모 */ .work_grid > .url_5 > .urlImg_5 > .Img_5 {
-    background: url(./images/work/works_thumb_003.jpg) no-repeat;
-    background-size: cover;
-    position: relative;
-    transform: rotate(45deg) scale(0.7071);
-    transform-origin: 50% 50%;
-}
-
-/* 사각형 */.work_grid > .url_6 > .urlImg_6 > .Img_6 {
-        background-image: url(./images/work/works_thumb_004.jpg);
-        background-size: cover;
-}
-/* 오각형 */.work_grid > .url_7 > .urlImg_7 > .Img_7 {
-        background-image: url(./images/work/works_thumb_019.jpg);
-        background-size: cover; 
-        background-repeat: no-repeat;
-        position: relative;
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-}
-/* 사각형 */.work_grid > .url_8 > .urlImg_8 > .Img_8{
-        background-image: url(./images/work/works_thumb_005.jpg);
-        background-size: cover;
-}
-/* 오각형 */.work_grid > .url_9 > .urlImg_9 > .Img_9 {
-        background-image: url(./images/work/works_thumb_006.jpg);
-        background-size: cover; 
-        background-repeat: no-repeat;
-        position: relative;
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-}
-/* 원 */.work_grid > .url_10 > .urlImg_10 > .Img_10 {
-        background-image: url(./images/work/works_thumb_007.jpg);
-        background-size: cover;
-        border-radius: 50%;
-}
-/* 마름모 */ .work_grid > .url_11 > .urlImg_11 > .Img_11 {
-        background: url(./images/work/works_thumb_008.jpg) no-repeat;
-        background-size: cover;
-        position: relative;
-        transform: rotate(45deg) scale(0.7071);
-        transform-origin: 50% 50%;
-}
-/* 사각형 */.work_grid > .url_12 > .urlImg_12 > .Img_12 {
-        background-image: url(./images/work/works_thumb_021.jpg);
-        background-size: cover;
+.work_btn {
+        margin: 0 auto;
+        margin-bottom: 200px;
 }
 
 /*** btn *****/
 .work_btn {
+        margin: 100px 0;
+        text-align: center;
+}
+
+.work_btn>a {
+        display: inline-block;
         text-align: center;
         text-transform: capitalize;
         border: 1px solid #EA5028;
         background-color: #fff;
         color: #EA5028;
-        margin: 0 auto; margin-bottom: 100px; margin-top: 100px;
-        width: 160px; height: 40px;
+        width: 160px;
+        height: 40px;
         line-height: 40px;
-        border-radius: 1.5625rem;
+        border-radius: 50px;
 }
-.work_btn:hover {
+
+.work_btn>a:hover {
         background-color: #EA5028;
         color: #fff;
 }
@@ -166,116 +152,120 @@ body {
 /*    ******* footer ******** */
 .work_footer {
         background-color: #EA5028;
-        padding: 28px 0px;
+        padding: 10px 0px;
         text-align: center;
+        box-sizing: border-box;
 }
-.work_footer > .footer_text {
+
+.work_footer>.footer_text {
+        max-width:90%;
+        margin:0 auto;
         padding: 0px 20px;
         color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 }
-.work_footer > .footer_text > .footer_btn > a {
-        width: 80px; height: 25.38px;
+
+.work_footer>.footer_text>.footer_btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap:0 40px;
+}
+.work_footer>.footer_text>.footer_btn>a {
+        padding:0px 15px;
         display: block;
         box-sizing: border-box;
-        font-size: 0.75rem;
         background-color: #fff;
         color: #EA5028;
-        border-radius: 0.9rem;
+        border-radius: 50px;
         line-height: 28.38px;
         margin: 0 auto;
 }
-.work_btn > .footer_text > .footer_btn {
-        width: 350px; height: 25.38px;
-        margin: 24.2667px 0px 0px;
-}
-}
+
 
 /* ## 태블릿 ## */
+@media screen and (max-width:1024px) {
+        .work_grid {
+                gap:0 3%;
+        }
 
+        .work_grid>.url {
+                max-width: 30%;
+                margin-top: 8rem;
+        }
+        .work_footer>.footer_text{
+                padding:30px 0;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ## pc ## */
-@media (width >= 1200px) {
-        .work_grid {      
-                display: grid;
-                width: 100%;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                grid-template-rows: repeat(3, minmax(0, 1fr));
-        }   
-
-/*    ******* header ******** */
-.work_header {
-        height: 120px;
-        padding: 20px;
+        .work_footer>.footer_text, .work_footer>.footer_text>.footer_btn{
+                flex-direction: column;
+                gap:10px;
+                font-size:14px;
+        }
+        .work_footer>.footer_text>.footer_btn{
+                gap:30px 0;
+        }
 }
-/******* title ********/
-.work_title {
-        width:  38.47%; height:  38.47%;
-        text-align: center;
-        margin: 0 auto;
-}
-.page-title__txt {
-        width: 60%;
+
+@media screen and (max-width: 680px) {
+        .work_grid {
+                gap:0 5%;
+        }
+        .work_grid>.url {
+                max-width: 47.5%;
+        }
 }
 
 
-/*    ******* main ******** */
-.main_title > h1 {
-        color: #EA5028;
-        text-align: center;
-        font-size: 5rem;
-        font-weight: bold;
-}
+/* ## 모바일 ## */
+@media screen and (max-width:576px) {
+
+        /*    ******* header ******** */
+        .work_header {
+                background-color: transparent;
+                position: sticky;
+                top: 0;
+                margin-bottom: 1px;
+        }
+
+        /********** title   *************/
+        .work_title {
+                width: 38.47%;
+                height: 38.47%;
+                text-align: center;
+                margin: 0 auto;
+        }
 
 
-.work_grid > .url_1 > .urlImg_1 > .Img_1 {
-        background-image: url(./images/work/works_thumb_024.jpg);
-        background-size: cover;
-        border-radius: 50%;
-        width: 100%; 
-    padding-bottom: 100%;
-    transition: background 0.5s;
-    position: relative;
-}
+        /*    ******* main ******** */
+        .main_title>h1 {
+                color: #EA5028;
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+        }
+
+        .work_grid {
+                margin: 0;
+        }
+
+        .work_grid>.url {
+                padding: 0px;
+                box-sizing: border-box;
+                max-width: 100%;
+        }
+
+        .work_grid>.url:first-child {
+                margin-top: 120px;
+        }
+
+        .work_grid>.url>p {
+                padding-top: 30px;
+                font-size: 1rem;
+        }
 
 
-.work_grid > .url > .urlImg {
-        display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.work_grid > .url > .urlImg > .Img {
-        width: 100%; 
-    padding-bottom: 100%;
-}
-.work_grid > .url {
-        margin: 218px 0px 0px;
-        padding: 0px 60px;
-        box-sizing: border-box;
-        width: 320px; height: 292px;
-}
-.work_grid > .url > p {
-        text-align: center;
-        padding: 40px 0px 0px;
-        font-size: 1.25rem;
-}
-.work_btn {
-        margin: 0 auto; margin-bottom: 200px;
-
-}
 
 }
